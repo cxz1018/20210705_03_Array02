@@ -82,6 +82,14 @@ public class MainDrive {
 //			?S ?B이 되었는지 출력.
 			System.out.println(strikeCount+"S " + ballCount+ "B 입니다.");
 			
+//			만약 3S 라면? => 정답 맞춘 케이스. => 추가 입력 받을 필요 X. => while 반복을 깨고 나가면 프로그램 종료.
+			if (strikeCount == 3) {
+				System.out.println("축하합니다!");
+				break;
+				
+				
+			}
+			
 		}
 		
 		
