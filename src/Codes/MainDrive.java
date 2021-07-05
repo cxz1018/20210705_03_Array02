@@ -24,11 +24,17 @@ public class MainDrive {
 //		몇 번 입력해야 3S가 될까? => 반복 횟수가 불명확한 반복. => 무한 while문으로 활용.
 		
 		Scanner myScan = new Scanner(System.in);
-				
+		
+//		정답입력을 몇번 시도했는지 저장할 변수.
+		int tryCount = 0;
+		
 		while (true) {
 			
 			System.out.print("3자리 숫자 입력 : ");
 			int inputNum = myScan.nextInt();
+			
+//			시도 횟수 1회 증가.
+			tryCount++;
 			
 //			입력받은 숫자도 => 3자리 배열에 나눠서 저장.
 //			123 => [1,2,3]
@@ -85,6 +91,7 @@ public class MainDrive {
 //			만약 3S 라면? => 정답 맞춘 케이스. => 추가 입력 받을 필요 X. => while 반복을 깨고 나가면 프로그램 종료.
 			if (strikeCount == 3) {
 				System.out.println("축하합니다!");
+				System.out.println(tryCount + "회 만에 맞췄습니다!");
 				break;
 				
 				
